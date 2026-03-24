@@ -4,6 +4,7 @@ import { CartProvider } from "@/context/CartContext";
 import { ThemeProvider } from "@/context/ThemeContext";
 import  ButtonTheme  from "@/components/ButtonTheme"
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
 
 import "./globals.css";
@@ -36,10 +37,11 @@ export default function RootLayout({
       >
         <CartProvider >
           <ThemeProvider>
-            <Navbar />
+            {/* <Navbar /> */}
             {children}
             <Toaster position="top-right" />
             <ButtonTheme/>
+            <Footer />
           </ThemeProvider>
         </CartProvider>
 

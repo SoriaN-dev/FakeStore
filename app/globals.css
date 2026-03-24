@@ -3,3 +3,32 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+
+@theme {
+  --animate-move-box: move-box 4s infinite;
+  --animate-orbite: orbite 4s linear infinite;
+
+  @keyframes orbite {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes move-box {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(200px, 0);
+    }
+     50% {
+      transform: translate(200px, 200px);
+    }
+     75% {
+      transform: translate(0, 200px);
+    }
+  }
+}
