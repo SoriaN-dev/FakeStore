@@ -11,15 +11,15 @@ const ref = useRef(null);
         offset: ["start start", "end end"]
     });
 
-    const y1 = useTransform(scrollYProgress, [0.1, 0.15, 0.69, 0.7, 0.8, 0.95], [900, 0, 0, 40, 40, 80]);
-    const scaleinit = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.6, 0.67, 0.7], [0.5, 1, 1, 0.9, 0.9, 0.8]);
+    const y1 = useTransform(scrollYProgress, [0, 0.1, 0.69, 0.7, 0.9, 0.95], [900, 0, 0, 40, 40, 80]);
+    const scaleinit = useTransform(scrollYProgress, [0.5, 0.6, 0.67, 0.7], [ 1, 0.9, 0.9, 0.8]);
     const opacity1 = useTransform(scrollYProgress, [0, 0.25], [0, 1]);
 
-    const y2 = useTransform(scrollYProgress, [0.3, 0.6, 0.8, 0.95], [999, 20, 20, 50]);
+    const y2 = useTransform(scrollYProgress, [0.3, 0.55, 0.8, 0.95], [999, 20, 20, 50]);
     const scalex2 = useTransform(scrollYProgress, [0.67, 0.7], [1, 0.9]);
     const opacity2 = useTransform(scrollYProgress, [0.3, 0.6], [0, 1]);
 
-    const y3 = useTransform(scrollYProgress, [0.6, 0.7], [999, 0]);
+    const y3 = useTransform(scrollYProgress, [0.57, 0.73], [999, 0]);
     const opacity3 = useTransform(scrollYProgress, [0.6, 0.7], [0, 1]);
 
     return (
