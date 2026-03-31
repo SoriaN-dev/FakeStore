@@ -39,13 +39,13 @@ function PageProducts() {
   }
 
   return (
-    <div className={`${theme} dark:bg-[#27272A] dark:text-slate-100 pt-10 animate-range-rapid min-h-screen w-full`}>
-      <div className='justify-end flex items-center px-10 gap-3 pt-15 md:pt-5'>
+    <div className={`${theme} dark:bg-[#27272A] dark:text-slate-100 pt-5  min-h-screen w-full flex flex-col items-center `}>
+      <div className='justify-end flex items-center px-10 gap-3 md:pb-3'>
         <p>Filtro:</p>
         <ProductFilter onFilterChange={setCaregory} />
       </div>
 
-      <div className='grid grid-cols-1 gap-5 px-10 sm:grid-cols-3 md:grid-cols-4 mt-4'>
+      <div className='grid grid-cols-[repeat(auto-fill,minmax(250px,1fr))] gap-10 w-3/4'>
         {
           products.map((product) => (
             <ProductCard key={product.id} product={product} />

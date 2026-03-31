@@ -38,12 +38,11 @@ function Hero() {
 
     const welcomeOpacity = useTransform(scrollYProgress, [0, 0.05, 0.15, 0.22], [0, 1, 1, 0]);
     const welcomeScale = useTransform(scrollYProgress, [0, 0.1, 0.34], [1, 1.7, 1]);
-
     const shopOpacity = useTransform(scrollYProgress, [0.17, 0.23], [0, 1]);
 
 
     return (
-        <section ref={ref} className="h-[250vh]">
+        <section ref={ref} className="h-[210vh]">
             <div className="sticky top-0 h-screen  flex items-center justify-center bg-[#101111] overflow-hidden">
                 <div className="relative w-3/4 h-full flex  items-center justify-center">
                     {IMG_SOURCES.map((data, index) => (
