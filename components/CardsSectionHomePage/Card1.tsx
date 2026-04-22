@@ -79,7 +79,7 @@ function Card1({ y, scalex }: Props) {
 
 
 
-                <motion.div className="absolute  flex flex-col gap-4 left-10 "
+                <motion.div className="absolute  flex flex-col gap-4 left-5 "
                     ref={ref1}
                     style={{ y: yTranslationUp }}
                 >
@@ -92,7 +92,7 @@ function Card1({ y, scalex }: Props) {
 
                 </motion.div>
 
-                <motion.div className="absolute  flex flex-col gap-6 right-10"
+                <motion.div className="absolute  flex flex-col gap-6 right-5"
                     ref={ref2}
                     style={{ y: yTranslationDown }}
                 >

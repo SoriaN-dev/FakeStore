@@ -2,11 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { CartProvider } from "@/context/CartContext";
 import { ThemeProvider } from "@/context/ThemeContext";
-import  ButtonTheme  from "@/components/ButtonTheme"
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { Toaster } from "react-hot-toast";
-
+import LayoutClient from "@/components/LayoutClient";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -30,18 +26,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased ` }
+        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
       >
         <CartProvider >
           <ThemeProvider>
-            <Navbar />
-            {children}
-            <Toaster position="top-right" />
-            <ButtonTheme/>
-            <Footer />
+            <LayoutClient>
+              {children}
+            </LayoutClient>
           </ThemeProvider>
         </CartProvider>
 

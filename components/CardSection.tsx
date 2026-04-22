@@ -36,7 +36,6 @@ function CardSection() {
                 <Card2 y={y2} scalex={scaleX2} />
                 <Card3 y={y3} />
 
-
             </div>
         </section>
 

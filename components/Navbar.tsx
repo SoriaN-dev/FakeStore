@@ -5,9 +5,12 @@ import React from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { useTheme } from '@/context/ThemeContext'
 
+type NavbarProps = {
+    hidden?: boolean;
+}
 
 
-function Navbar() {
+function Navbar( {hidden}:NavbarProps) {
     const { cart } = useCart();
     const router = useRouter();
     const { theme } = useTheme();
@@ -15,9 +18,9 @@ function Navbar() {
 
     return (
         <div className='flex items-center justify-center'>
-            <nav className=" text-slate-100
+            <nav className={`text-slate-100
              flex place-content-between py-1 my-1 px-2 z-50 fixed bottom-2  rounded-2xl items-center 
-             border-[#6f6f6f]  border-1 font-bold backdrop-blur-xl  backdrop-saturate-50 w-10/12 sm:w-4/5 md:w-2/8">
+             border-[#6f6f6f]  border-1 font-bold backdrop-blur-xl  backdrop-saturate-50 w-10/12 sm:w-4/5 md:w-2/8 ${hidden ? 'hidden' : 'block'}`}>
                 
                 <div className='flex h-9 w-9'>
                     <button className="cursor-pointer object-contain" onClick={() => { router.push("/") }}>
